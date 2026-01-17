@@ -2,7 +2,7 @@
 
 A requirements.txt file in Python is a plain text file that lists all the necessary packages and their specific versions required for a project to run correctly. It is a fundamental best practice for Python development, ensuring project dependencies are well-documented, easily reproducible across different environments, and simplifying collaboration. 
 
----
+------------------------------------------------------------------------------------------------------------------
 
 ## Table of Contents
 
