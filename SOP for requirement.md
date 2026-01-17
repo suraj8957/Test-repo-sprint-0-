@@ -35,9 +35,7 @@
 
 ## 1. Purpose
 This SOP outlines standardized procedures to:
-- Check disk usage and mount points
-- Configure and verify ulimit (user limits) settings for users and processes  
-on Ubuntu-based systems, ensuring optimal system performance and resource usage.
+- The purpose of this Standard Operating Procedure (SOP) is to provide a structured and consistent approach for installing Python packages using a requirements.txt file, generating dependency lists, and troubleshooting common dependency-related issues. This SOP ensures that application environments are set up accurately, dependencies are managed efficiently, and errors caused by version conflicts or missing packages are resolved quickly. By following this SOP, teams can achieve reliable, repeatable, and stable application setups across development, testing, and production environments.
 
 ---
 
