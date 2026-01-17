@@ -39,12 +39,12 @@ This SOP outlines standardized procedures to provide a structured and consistent
 ---
 
 ## 2. Scope
-Applicable to all Ubuntu servers.
+This SOP applies to all team members involved in setting up, maintaining, and supporting Python-based applications. It covers the installation of dependencies from a requirements.txt file, the generation and maintenance of dependency lists, and the troubleshooting of common dependency-related issues such as version conflicts, missing packages, and environment inconsistencies. The scope includes usage across development, testing, staging, and production environments to ensure consistent and reliable application deployments.
 
 ---
 
 ## 3. Prerequisites
-- Access to the Ubuntu server with sudo privileges.
+- 1.**Operating System Access**-Access to a Linux, macOS, or Windows system with terminal/command-line access.
 - Basic knowledge of Linux command-line operations.
 
 ---
