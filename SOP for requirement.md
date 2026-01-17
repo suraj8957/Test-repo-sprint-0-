@@ -44,8 +44,14 @@ This SOP applies to all team members involved in setting up, maintaining, and su
 ---
 
 ## 3. Prerequisites
-- 1.**Operating System Access**-Access to a Linux, macOS, or Windows system with terminal/command-line access.
-- Basic knowledge of Linux command-line operations.
+- **Operating System Access**-Access to a Linux, macOS, or Windows system with terminal/command-line access.
+- **Python Installed-**A supported version of Python (for example, Python 3.8 or higher) installed and available in the system PATH.
+- **Package Manager (pip)-**pip must be installed and configured for the corresponding Python version.
+- **Virtual Environment Tool (Recommended)-**Availability of tools such as venv, virtualenv, or conda to isolate project dependencies.
+- **requirements.txt File-**A valid requirements.txt file containing the required Python package names and versions.
+- **Internet Connectivity-**Stable internet access to download packages from Python Package Index (PyPI) or configured private repositories
+- **Basic Command-Line Knowledge-**Familiarity with basic terminal commands and Python package installation commands.
+- **Access Permissions-**Sufficient permissions to install packages or create virtual environments on the system.
 
 ---
 
