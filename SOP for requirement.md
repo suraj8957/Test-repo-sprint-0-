@@ -55,9 +55,11 @@ This SOP applies to all team members involved in setting up, maintaining, and su
 
 ---
 
-## 4. Procedure
+## 4. Installation from requirement.txt
 
-### 4.1 Check Disk Usage
+### 4.1 Navigate to Project Directory
+<img width="663" height="157" alt="image" src="https://github.com/user-attachments/assets/59a7fb2b-85f9-470a-a614-d5e941fb5af6" />
+
 
 #### 4.1.1 List All Mounted Filesystems & Usage
 ```bash
