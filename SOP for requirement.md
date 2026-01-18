@@ -69,6 +69,19 @@ python3 -m venv surajvenv
 #### 4.1.1 Activate the Virtual Environment
 <img width="961" height="143" alt="image" src="https://github.com/user-attachments/assets/d811553c-3186-4af6-9a0b-6472798ef094" />
 
+#### 4.1.1 Activate the Virtual Environment
+<img width="961" height="143" alt="image" src="https://github.com/user-attachments/assets/d811553c-3186-4af6-9a0b-6472798ef094" />
+
+#### 4.1.1 Create the file "requirement.txt" and install the packages from the requirement file
+<img width="1912" height="506" alt="image" src="https://github.com/user-attachments/assets/983e19cb-7358-44ba-8dd7-2e8616837e19" />
+The **requirement.txt** file should list each Python package on a new line. For best results, use "version pinning" to ensure your code doesn't break when a library updates. 
+Standard Entry: package_name==version (e.g., pandas==2.2.3).
+Alternative (Ranges): package_name>=1.0.0 (allows any version 1.0.0 or newer).
+Comments: Use # to add notes (e.g., # used for data cleaning).
+#### 4.1.1 Create the file "requirement.txt" and install the packages from the requirement file
+<img width="1912" height="506" alt="image" src="https://github.com/user-attachments/assets/983e19cb-7358-44ba-8dd7-2e8616837e19" />
+
+
 - **Purpose:** Displays all mounted filesystems with type and human-readable sizes.
 
 ![alt text](image.png)
