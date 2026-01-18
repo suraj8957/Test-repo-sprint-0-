@@ -61,10 +61,14 @@ This SOP applies to all team members involved in setting up, maintaining, and su
 <img width="663" height="157" alt="image" src="https://github.com/user-attachments/assets/59a7fb2b-85f9-470a-a614-d5e941fb5af6" />
 
 
-#### 4.1.1 List All Mounted Filesystems & Usage
+#### 4.1.1 Create a Virtual Environment (Recommended)
+Create an isolated environment to avoid dependency conflicts.
 ```bash
-df -hT
+python3 -m venv surajvenv
 ```
+#### 4.1.1 Activate the Virtual Environment
+<img width="961" height="143" alt="image" src="https://github.com/user-attachments/assets/d811553c-3186-4af6-9a0b-6472798ef094" />
+
 - **Purpose:** Displays all mounted filesystems with type and human-readable sizes.
 
 ![alt text](image.png)
