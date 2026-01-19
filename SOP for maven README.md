@@ -26,7 +26,7 @@
 
    5.5 Package Application
 
-    5.6 Install to Local Repository
+   5.6 Install to Local Repository
 
    5.7 Deploy to Remote Repository
 
@@ -97,14 +97,47 @@ In enterprise and CI/CD environments, Maven enables deterministic builds, versio
 
 ---
 
-## System Requirement
+## 5. Commonly Used Maven Commands
+### 5.1 Check Maven Version
+```bash
+mvn --version
+```
+### 5.2 Clean Project
+Removes previously compiled files.
+```bash
+mvn clean
+```
+### 5.3 Compile Source Code
+Compiles the source code of the project.
+```bash
+mvn compile
+```
+### 5.4 Run Unit Tests
+Executes test cases.
+```bash
+mvn test
+```
+### 5.5 Package Application
+Creates JAR/WAR file.
+```bash
+mvn package
+```
+### 5.6 Install to Local Repository
+Installs the artifact into the local .m2 repository.
+```bash
+mvn install
+```
+### 5.7 Deploy to Remote Repository
+Uploads artifact to remote repository (Nexus/Artifactory).
+```bash
+mvn deploy
+```
+### 5.8 Full Build Lifecycle
+Uploads artifact to remote repository (Nexus/Artifactory).
+```bash
+mvn clean install
+```
 
-| Requirement             | Minimum Recommendation         |
-| ----------------------- | ------------------------------ |
-| Processor/Instance Type | Dual-Core / t2.micro or higher |
-| RAM                     | 1 GB or Higher                 |
-| ROM (Disk Space)        | 5 GB or Higher                 |
-| OS Required             | Linux (Ubuntu Recommended)     |
 
 ---
 
