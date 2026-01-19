@@ -4,63 +4,39 @@
 
 ## Table of Contents
 
-1. [Purpose](#1-Purpose)
+1. [Purpose](#1-purpose)
+2. [Scope](#2-scope)
+3. [Pre-requisites](#3-pre-requisites)
+4. [Overview of Apache Maven](#4-overview-of-apache-maven)
 
-2. [Scope](#2.Scope)
+5. [Commonly Used Maven Commands](#5-commonly-used-maven-commands)
+   - [5.1 Check Maven Version](#51-check-maven-version)
+   - [5.2 Clean Project](#52-clean-project)
+   - [5.3 Compile Source Code](#53-compile-source-code)
+   - [5.4 Run Unit Tests](#54-run-unit-tests)
+   - [5.5 Package Application](#55-package-application)
+   - [5.6 Install to Local Repository](#56-install-to-local-repository)
+   - [5.7 Deploy to Remote Repository](#57-deploy-to-remote-repository)
+   - [5.8 Full Build Lifecycle](#58-full-build-lifecycle)
 
-3. [Pre-requisites](#3-Pre-requisites)
+6. [Dependency Management Commands](#6-dependency-management-commands)
+   - [6.1 Resolve Dependencies](#61-resolve-dependencies)
+   - [6.2 View Dependency Tree](#62-view-dependency-tree)
+   - [6.3 Analyze Dependencies](#63-analyze-dependencies)
+   - [6.4 Update Dependencies](#64-update-dependencies)
 
-4. [Overview of Apache Maven](#4-Overview_of_Apache_Maven)
+7. [Debugging and Troubleshooting Commands](#7-debugging-and-troubleshooting-commands)
+   - [7.1 Enable Debug Logs](#71-enable-debug-logs)
+   - [7.2 Display Error Stack Traces](#72-display-error-stack-traces)
+   - [7.3 Skip Tests](#73-skip-tests)
+   - [7.4 Run Specific Tests](#74-run-specific-tests)
+   - [7.5 Force Dependency Updates](#75-force-dependency-updates)
+   - [7.6 Offline Builds](#76-offline-builds)
 
-5. [Commonly Used Maven Commands](#5-Commonly Used Maven Commands)
-
-   5.1 [Check Maven Version](#51-Check Maven Version)
-
-   5.2 Clean Project
-
-   5.3 Compile Source Code
-
-   5.4 Run Unit Tests
-
-   5.5 Package Application
-
-   5.6 Install to Local Repository
-
-   5.7 Deploy to Remote Repository
-
-   5.8 Full Build Lifecycle
-
-6. Dependency Management Commands
-
-   6.1 Resolve Dependencies
-
-   6.2 View Dependency Tree
-
-   6.3 Analyze Dependencies
-
-   6.4 Update Dependencies
-
-7. Debugging and Troubleshooting Commands
-
-   7.1 Enable Debug Logs
-
-   7.2 Display Error Stack Traces
-
-   7.3 Skip Tests
-
-   7.4 Run Specific Tests
-
-   7.5 Force Dependency Updates
-
-   7.6 Offline Builds
-
-8. Common Issues and Resolutions
-
-9. Best Practices
-
-10.Conslusion
-
-11.Author Details
+8. [Common Issues and Resolutions](#8-common-issues-and-resolutions)
+9. [Best Practices](#9-best-practices)
+10. [Conclusion](#10-conclusion)
+11. [Author Details](#11-author-details)
 
 
 ---
