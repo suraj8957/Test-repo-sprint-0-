@@ -10,31 +10,48 @@
 4. [Overview of Apache Maven](#4-overview-of-apache-maven)
 
 5. [Commonly Used Maven Commands](#5-commonly-used-maven-commands)
+
      [5.1 Check Maven Version](#51-check-maven-version)
+   
      [5.2 Clean Project](#52-clean-project)
+   
      [5.3 Compile Source Code](#53-compile-source-code)
+   
      [5.4 Run Unit Tests](#54-run-unit-tests)
+   
      [5.5 Package Application](#55-package-application)
+   
      [5.6 Install to Local Repository](#56-install-to-local-repository)
+   
      [5.7 Deploy to Remote Repository](#57-deploy-to-remote-repository)
+   
      [5.8 Full Build Lifecycle](#58-full-build-lifecycle)
 
-6. [Dependency Management Commands](#6-dependency-management-commands)
+7. [Dependency Management Commands](#6-dependency-management-commands)
+
      [6.1 Resolve Dependencies](#61-resolve-dependencies)
+   
      [6.2 View Dependency Tree](#62-view-dependency-tree)
+   
      [6.3 Analyze Dependencies](#63-analyze-dependencies)
+   
      [6.4 Update Dependencies](#64-update-dependencies)
 
 7. [Debugging and Troubleshooting Commands](#7-debugging-and-troubleshooting-commands)
+    
      [7.1 Enable Debug Logs](#71-enable-debug-logs)
+   
      [7.2 Display Error Stack Traces](#72-display-error-stack-traces)
+   
      [7.3 Skip Tests](#73-skip-tests)
+   
      [7.4 Run Specific Tests](#74-run-specific-tests)
+   
      [7.5 Force Dependency Updates](#75-force-dependency-updates)
      [7.6 Offline Builds](#76-offline-builds)
 
-8. [Common Issues and Resolutions](#8-common-issues-and-resolutions)
-9. [Best Practices](#9-best-practices)
+ 8. [Common Issues and Resolutions](#8-common-issues-and-resolutions)
+ 9. [Best Practices](#9-best-practices)
 10. [Conclusion](#10-conclusion)
 11. [Author Details](#11-author-details)
 
@@ -203,7 +220,7 @@ mvn clean install -o
 
 - Enable debug (-X) or stack trace (-e) options only when troubleshooting
 
-## Conslusion
+## 10. Conslusion
 This SOP provides standardized guidance for using Apache Maven to build, test, and manage Java applications efficiently. By following the defined commands, dependency management practices, and best practices, teams can achieve consistent, reliable, and repeatable builds across all environments. Adhering to this SOP helps reduce build failures, improve CI/CD stability, and ensure production-ready artifacts.
 
 ## 11. Author Details
