@@ -6,15 +6,15 @@
 
 1. [Purpose](#1-Purpose)
 
-2. Scope
+2. [Scope](#2.Scope)
 
-3. Pre-requisites
+3. [Pre-requisites](#3-Pre-requisites)
 
-4. Overview of Apache Maven
+4. [Overview of Apache Maven](#4-Overview of Apache Maven)
 
-5. Commonly Used Maven Commands
+5. [Commonly Used Maven Commands](#5-Commonly Used Maven Commands)
 
-   5.1 Check Maven Version
+   5.1 [Check Maven Version](#51-Check Maven Version)
 
    5.2 Clean Project
 
@@ -67,10 +67,10 @@
 ## 1. Purpose
 The purpose of this SOP is to provide standardized guidelines for using Apache Maven to build, manage dependencies, and package Java applications. It also outlines commonly used Maven commands and debugging techniques to identify and resolve build-related issues efficiently
 
-## Scope
+## 2. Scope
 This SOP applies to developers, DevOps engineers, and build/release teams working with Java-based applications that use Maven for build and dependency management across development, testing, and production environments.
 
-## Pre-requisites
+## 3. Pre-requisites
 
 - Java (JDK 8, 11, or 17) installed
 
@@ -84,7 +84,7 @@ This SOP applies to developers, DevOps engineers, and build/release teams workin
 
 ---
 
-## Overview of Apache Maven
+## 4. Overview of Apache Maven
 
 Apache Maven is a build automation and dependency management tool primarily used for Java-based applications. It provides a standardized and declarative approach to building, testing, packaging, and deploying software projects. Maven uses a centralized configuration model called the Project Object Model (POM), defined in a pom.xml file, to describe the project structure, dependencies, plugins, and build behavior.
 
