@@ -8,35 +8,35 @@
 
 1. Purpose
 
-2.Scope
+2. Scope
 
 3. Pre-requisites
 
 4. verview of Apache Maven
 
 5. Commonly Used Maven Commands
-5.1 Check Maven Version
-5.2 Clean Project
-5.3 Compile Source Code
-5.4 Run Unit Tests
-5.5 Package Application
-5.6 Install to Local Repository
-5.7 Deploy to Remote Repository
-5.8 Full Build Lifecycle
+  5.1 Check Maven Version
+  5.2 Clean Project
+  5.3 Compile Source Code
+  5.4 Run Unit Tests
+  5.5 Package Application
+  5.6 Install to Local Repository
+  5.7 Deploy to Remote Repository
+  5.8 Full Build Lifecycle
 
 6. Dependency Management Commands
-6.1 Resolve Dependencies
-6.2 View Dependency Tree
-6.3 Analyze Dependencies
-6.4 Update Dependencies
+  6.1 Resolve Dependencies
+  6.2 View Dependency Tree
+  6.3 Analyze Dependencies
+  6.4 Update Dependencies
 
 7. Debugging and Troubleshooting Commands
-7.1 Enable Debug Logs
-7.2 Display Error Stack Traces
-7.3 Skip Tests
-7.4 Run Specific Tests
-7.5 Force Dependency Updates
-7.6 Offline Builds
+  7.1 Enable Debug Logs
+  7.2 Display Error Stack Traces
+  7.3 Skip Tests
+  7.4 Run Specific Tests
+  7.5 Force Dependency Updates
+  7.6 Offline Builds
 
 8. Common Issues and Resolutions
 
