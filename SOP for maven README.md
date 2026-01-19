@@ -64,7 +64,7 @@
 
 
 ---
-## Purpose
+## 1. Purpose
 The purpose of this SOP is to provide standardized guidelines for using Apache Maven to build, manage dependencies, and package Java applications. It also outlines commonly used Maven commands and debugging techniques to identify and resolve build-related issues efficiently
 
 ## Scope
