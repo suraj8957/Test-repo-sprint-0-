@@ -52,7 +52,7 @@
 
  8. [Common Issues and Resolutions](#8-common-issues-and-resolutions)
  9. [Best Practices](#9-best-practices)
-10. [Conclusion](#10-conclusion)
+10. [Conclusion](#10-Conclusion)
 11. [Author Details](#11-author-details)
 
 
@@ -220,7 +220,7 @@ mvn clean install -o
 
 - Enable debug (-X) or stack trace (-e) options only when troubleshooting
 
-## 10. Conslusion
+## 10. Conclusion
 This SOP provides standardized guidance for using Apache Maven to build, test, and manage Java applications efficiently. By following the defined commands, dependency management practices, and best practices, teams can achieve consistent, reliable, and repeatable builds across all environments. Adhering to this SOP helps reduce build failures, improve CI/CD stability, and ensure production-ready artifacts.
 
 ## 11. Author Details
