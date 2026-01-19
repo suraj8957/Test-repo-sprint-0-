@@ -1,12 +1,10 @@
-# Standard Operating Procedure (SOP's) for JQ
-
-## Step by step installation guide for **JQ** on Ubuntu
+# Standard Operating Procedure (SOP's) for Maven
 
 ---
 
 ## Table of Contents
 
-1. Purpose
+1. [Purpose](#1-Purpose)
 
 2. Scope
 
@@ -60,9 +58,10 @@
 
 9. Best Practices
 
-10.Useful Maven Options
+10.Conslusion
 
-11.Conclusion
+11.Author Details
+
 
 ---
 ## Purpose
@@ -166,147 +165,73 @@ mvn versions:use-latest-releases
 
 ---
 
-### Other Dependency
+## 7. Debugging and Troubleshooting Commands
 
-| Other Dependency | Version                  | Description                                                            |
-| ---------------- | ------------------------ | ---------------------------------------------------------------------- |
-| **curl / wget**  | Latest package available | Used to fetch API responses or download JSON before processing with jq |
-| **bash / shell** | Default OS shell         | jq is typically used inside bash scripts and CLI pipelines             |
-
-➡️ Explanation:
-
-jq itself does not require extra runtime packages.
-In real DevOps workflows, jq is commonly used with curl:
-
+### 7.1 Enable Debug Logs
+Shows detailed Maven execution logs.
 ```bash
-curl https://api.github.com/users/octocat | jq '.id'
+mvn clean install -X
 ```
-
----
-
-## Installation — Ubuntu (Debian-based Systems)
-
-### 1️⃣ Update Package Index
-
+### 7.2 Display Error Stack Traces
+Displays only error stack traces.
 ```bash
-sudo apt-get update -y
+mvn clean install -e
 ```
-
-<img width="955" height="588" alt="image" src="https://github.com/user-attachments/assets/1d8b69af-bc4c-4043-930b-97a0e64a1086" />
-
----
-
-### 2️⃣ Install jq
-
+### 7.3 Skip Tests
+Builds the project while skipping test execution to speed up the build process
 ```bash
-sudo apt-get install jq -y
+mvn clean install -DskipTests
 ```
-
-<img width="952" height="363" alt="image" src="https://github.com/user-attachments/assets/0605c23e-ca5e-4ef7-ab28-aca5e870abe8" />
-
----
-
-### 3️⃣ Verify Installation
-
+### 7.4 Run Specific Tests
+Runs only the specified test class instead of executing all tests.
 ```bash
-jq --version
+mvn -Dtest=TestClassName test
 ```
-
-Expected output (example):
-
-<img width="954" height="61" alt="image" src="https://github.com/user-attachments/assets/41e749e6-96ef-4d3c-9b7d-50288c3d0d62" />
-
----
-
-## Quick Usage Test
-
-### Step 1 — Create `sample.json`
-
+### 7.5 Force Dependency Updates
+Forces Maven to update snapshots and re-download dependencies from remote repositories before building the project.
 ```bash
-echo '{"name":"Abhinav","batch":32,"tool":"jq"}' > sample.json
+mvn clean install -U
 ```
-
-### Step 2 — Run jq
-
+### 7.6 Offline Builds
+Builds the project in offline mode using only locally cached dependencies, without accessing remote repositories.
 ```bash
-jq '.' sample.json
+mvn clean install -o
 ```
-
-### Pretty-print Output
-
-```json
-{
-  "name": "Abhinav",
-  "batch": 32,
-  "tool": "jq"
-}
-```
-
-<img width="877" height="166" alt="image" src="https://github.com/user-attachments/assets/4e4a26cc-fa0d-4764-8311-9ac264f7ded5" />
 
 ---
 
-## Troubleshooting (Ubuntu)
+## 8. Common Issues and Resolutions
+| Issue                      | Possible Cause                | Resolution                                    |
+|----------------------------|-------------------------------|-----------------------------------------------|
+| mvn: command not found     | Maven is not installed or not added to the system PATH | Add the Maven bin directory to the PATH environment variable   |
+| Dependency download failure        | Network issues or repository access problems     | mvn clean install -U   |
+| Build fails due to test failures   | Unit or integration tests are failing    | mvn clean install -DskipTests   |
+| Dependency version conflicts      | Conflicting transitive dependencies   | mvn dependency:tree        |
 
-| Issue                   | Fix                                       |     |
-| ----------------------- | ----------------------------------------- | --- |
-| `jq: command not found` | Reinstall using `sudo apt-get install jq` |     |
-| Output unreadable       | Use pipe `                                | jq` |
-| Permission denied       | Run command with `sudo`                   |     |
+## 9. Best Practices
+- Use LTS Java versions (JDK 8, 11, or 17) and keep Java/Maven versions consistent across environments
 
----
+- Always define explicit dependency and plugin versions in pom.xml
 
-## Uninstall jq
+- Avoid using LATEST or RELEASE versions in production
 
+- Run clean builds for releases:
 ```bash
-sudo apt-get remove jq -y
+   mvn clean install
 ```
+- Use dependency:tree and dependency:analyze to avoid conflicts and unused dependencies
 
-<img width="953" height="264" alt="image" src="https://github.com/user-attachments/assets/b9b4184a-22ae-4893-a1c5-3d15033618de" />
+- Do not skip tests in production builds; use -DskipTests only for local or temporary builds
 
----
+- Use centralized repositories like Nexus or Artifactory for dependency management
 
-## Examples
+- Enable debug (-X) or stack trace (-e) options only when troubleshooting
 
-| Command            | Purpose           |                       |
-| ------------------ | ----------------- | --------------------- |
-| `jq '.' file.json` | Pretty print JSON |                       |
-| `curl <API>        | jq '.id'`         | Extract key from API  |
-| `.[]               | select(.active)`  | Filter matching items |
+## Conslusion
+This SOP provides standardized guidance for using Apache Maven to build, test, and manage Java applications efficiently. By following the defined commands, dependency management practices, and best practices, teams can achieve consistent, reliable, and repeatable builds across all environments. Adhering to this SOP helps reduce build failures, improve CI/CD stability, and ensure production-ready artifacts.
 
----
+## 11. Author Details
+| Name             | Role            | Team                 | Contact Type | Details |  
+|------------------|-----------------|----------------------|--------------|---------|
+| Suraj Tripathi   | Devops Trainee  |  Saarthi             |Email         |[surajtripathi167@gmail.com](mailto:surajtripathi167@gmail.com)
 
-## 📌 Summary
-
-`jq` is a lightweight yet powerful command-line utility designed for **processing JSON data efficiently**.
-It is widely used in DevOps workflows involving APIs, cloud services, logs, and automation pipelines.
-
----
-
-## Author
-
-| Name             | Role            | Team                 |
-| ---------------- | --------------- | -------------------- |
-| Abhinav Sikarwar | DevOps Trainee | Saarthi |
-
----
-
-## Contact Information
-
-| Contact Type | Details                                                             |
-| ------------ | ------------------------------------------------------------------- |
-| Email        | [abhinavsikarwar011@gmail.com](mailto:abhinavsikarwar011@gmail.com) |
-
-
----
-
-## References
-
-| Reference                 | Link                                                             |
-| ------------------------- | ---------------------------------------------------------------- |
-| Official jq Documentation | [https://jqlang.github.io/jq/](https://jqlang.github.io/jq/)     |
-| jq GitHub Repository      | [https://github.com/jqlang/jq](https://github.com/jqlang/jq)     |
-| Ubuntu jq Package         | [https://packages.ubuntu.com/jq](https://packages.ubuntu.com/jq) |
-| JSON Validator            | [https://jsonlint.com](https://jsonlint.com)                     |
-
----
