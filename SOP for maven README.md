@@ -12,31 +12,49 @@
 
 3. Pre-requisites
 
-4. verview of Apache Maven
+4. Overview of Apache Maven
 
 5. Commonly Used Maven Commands
-  5.1 Check Maven Version
-  5.2 Clean Project
-  5.3 Compile Source Code
-  5.4 Run Unit Tests
-  5.5 Package Application
-  5.6 Install to Local Repository
-  5.7 Deploy to Remote Repository
-  5.8 Full Build Lifecycle
+
+   5.1 Check Maven Version
+
+   5.2 Clean Project
+
+   5.3 Compile Source Code
+
+   5.4 Run Unit Tests
+
+   5.5 Package Application
+
+    5.6 Install to Local Repository
+
+   5.7 Deploy to Remote Repository
+
+   5.8 Full Build Lifecycle
 
 6. Dependency Management Commands
-  6.1 Resolve Dependencies
-  6.2 View Dependency Tree
-  6.3 Analyze Dependencies
-  6.4 Update Dependencies
+
+   6.1 Resolve Dependencies
+
+   6.2 View Dependency Tree
+
+   6.3 Analyze Dependencies
+
+   6.4 Update Dependencies
 
 7. Debugging and Troubleshooting Commands
-  7.1 Enable Debug Logs
-  7.2 Display Error Stack Traces
-  7.3 Skip Tests
-  7.4 Run Specific Tests
-  7.5 Force Dependency Updates
-  7.6 Offline Builds
+
+   7.1 Enable Debug Logs
+
+   7.2 Display Error Stack Traces
+
+   7.3 Skip Tests
+
+   7.4 Run Specific Tests
+
+   7.5 Force Dependency Updates
+
+   7.6 Offline Builds
 
 8. Common Issues and Resolutions
 
@@ -50,19 +68,32 @@
 ## Purpose
 The purpose of this SOP is to provide standardized guidelines for using Apache Maven to build, manage dependencies, and package Java applications. It also outlines commonly used Maven commands and debugging techniques to identify and resolve build-related issues efficiently
 
+## Scope
+This SOP applies to developers, DevOps engineers, and build/release teams working with Java-based applications that use Maven for build and dependency management across development, testing, and production environments.
+
 ## Pre-requisites
 
-| License Type | Description                                          | Commercial Use | Open Source |
-| ------------ | ---------------------------------------------------- | -------------- | ----------- |
-| MIT License  | Free for public use, modification and redistribution | Yes            | Yes         |
+- Java (JDK 8, 11, or 17) installed
+
+- JAVA_HOME configured
+
+- Maven installed and accessible in PATH
+
+- Basic understanding of Java projects
+
+- Access to a Maven project (pom.xml)
 
 ---
 
-## Software Overview
+## Overview of Apache Maven
 
-| Software | Version |
-| -------- | ------- |
-| jq       | jq-1.7  |
+Apache Maven is a build automation and dependency management tool primarily used for Java-based applications. It provides a standardized and declarative approach to building, testing, packaging, and deploying software projects. Maven uses a centralized configuration model called the Project Object Model (POM), defined in a pom.xml file, to describe the project structure, dependencies, plugins, and build behavior.
+
+Maven follows a convention-over-configuration philosophy, which reduces the need for custom build scripts by enforcing standard project layouts and default build lifecycles. It defines three core build lifecycles—clean, default, and site—each composed of well-defined phases such as compile, test, package, install, and deploy. Executing a phase automatically triggers all preceding phases in that lifecycle, ensuring consistent and repeatable builds.
+
+A key strength of Maven is its dependency management system, which automatically resolves and downloads required libraries and their transitive dependencies from remote repositories such as Maven Central, Nexus, or Artifactory. Maven also manages plugin execution to perform tasks like compilation, testing, packaging, and reporting, allowing build logic to be modular and extensible.
+
+In enterprise and CI/CD environments, Maven enables deterministic builds, version-controlled dependency definitions, and seamless integration with automation tools like Jenkins and GitHub Actions. By standardizing build processes and reducing manual intervention, Apache Maven plays a critical role in delivering reliable, maintainable, and scalable Java applications.
 
 ---
 
