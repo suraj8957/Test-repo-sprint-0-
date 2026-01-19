@@ -141,17 +141,28 @@ mvn clean install
 
 ---
 
-## Dependencies
+## 6. Dependency Management Commands
 
-### Run-time Dependency
-
-| Run-time Dependency | Version            | Description                                                   |
-| ------------------- | ------------------ | ------------------------------------------------------------- |
-| **glibc / libc6**   | Default OS version | Core Linux C library required to execute compiled jq binaries |
-
-➡️ Explanation:
-jq is written in C, so it needs the GNU C standard library (already available in Ubuntu).
-No manual installation needed — it comes pre-installed with Linux.
+### 6.1 Resolve Dependencies
+Resolves and downloads all project dependencies defined in pom.xml into the local Maven repository.
+```bash
+mvn dependency:resolve
+```
+### 6.2 View Dependency Tree
+Displays the complete hierarchical tree of project dependencies, including transitive dependencies.
+```bash
+mvn dependency:tree
+```
+### 6.3 Analyze Dependencies
+Analyzes project dependencies to identify unused and missing dependencies in the pom.xml.
+```bash
+mvn dependency:analyze
+```
+### 6.4 Update Dependencies
+Updates all project dependencies to their latest available release versions.
+```bash
+mvn versions:use-latest-releases
+```
 
 ---
 
