@@ -4,6 +4,10 @@
 This document is a **Standard Operating Procedure (SOP)** explaining how to **install Maven**, **understand `pom.xml`**, and **use it step by step** in real projects.  .
 
 ---
+## Document Details
+|     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|-----------------|--------------|---------|----------------|-------------|-------------|-------------|
+| Suraj Tripathi  |  2026-01-16  |  1.0    |                |             |             |             |
 
 ## 1. Purpose of this SOP
 
