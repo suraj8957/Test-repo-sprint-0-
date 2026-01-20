@@ -1,6 +1,9 @@
 # Standard Operating Procedure (SOP's) for Java Installation and Upgrade Using Bash Script (Ubuntu/Debian)
 
 ## Document Details
+|     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|-----------------|--------------|---------|----------------|-------------|-------------|-------------|
+| Suraj Tripathi  |  2026-01-16  |  1.0    |                |             |             |             |
 
 ---
 
