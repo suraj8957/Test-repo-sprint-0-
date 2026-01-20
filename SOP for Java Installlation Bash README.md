@@ -1,4 +1,4 @@
-# Standard Operating Procedure (SOP's) for Java Installation and Upgrade Using Bash Script (Ubuntu/Debian)
+# Standard Operating Procedure: Java Installation and Upgrade Using Bash Script (Ubuntu/Debian)
 
 ## Document Details
 |     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
@@ -9,18 +9,21 @@
 
 ## Table of Contents
 
- 1. [Purpose](#1-Purpose)
- 2. [Scope](#2-Scope)
- 3. [Prerequisites](#3-Prerequisites)
- 4. [Script_Overview](#4-Script_Overview)
- 5. Create the Bash Script
- 6. Grant Execute Permission
- 7. Execute the Script
- 8. Java Version Selection
- 9. Java Installation Process
-10. Java Upgrade / Version Switching
-11. Author
-12. References
+1. [Purpose](#1-purpose)
+2. [Scope](#2-scope)
+3. [Prerequisites](#3-prerequisites)
+4. [Script Overview](#4-script_overview)
+5. [Create the Bash Script](#5-create-the-bash-script)
+6. [Grant Execute Permission](#6-grant-execute-permission)
+7. [Execute the Script](#7-execute-the-script)
+8. [Java Version Selection](#8-java-version-selection)
+9. [Java Installation Process](#9-java-installation-process)
+10. [Java Upgrade / Version Switching](#10-java-upgrade--version-switching)
+11. [JAVA_HOME Configuration](#11-java_home-configuration)
+12. [Verification](#12-verification)
+13. [Troubleshooting](#13-troubleshooting)
+14. [Best Practices](#14-best-practices)
+15. [Conclusion](#15-conclusion)
 
 ---
 
