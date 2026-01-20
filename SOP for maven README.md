@@ -70,14 +70,10 @@ This SOP applies to developers, DevOps engineers, and build/release teams workin
 ## 3. Pre-requisites
 
 - Java (JDK 8, 11, or 17) installed
-
-- JAVA_HOME configured
-
-- Maven installed and accessible in PATH
-
-- Basic understanding of Java projects
-
-- Access to a Maven project (pom.xml)
+- JAVA_HOME environment variable configured
+- Maven installed and available in system PATH
+- Basic understanding of Java and build tools
+- Access to a Maven project containing pom.xml
 
 ---
 
@@ -129,11 +125,10 @@ Uploads artifact to remote repository (Nexus/Artifactory).
 mvn deploy
 ```
 ### 5.8 Full Build Lifecycle
-Uploads artifact to remote repository (Nexus/Artifactory).
+Runs a complete clean build, compiles code, executes tests, and installs the artifact into the local Maven repository.
 ```bash
 mvn clean install
 ```
-
 
 ---
 
@@ -159,6 +154,8 @@ Updates all project dependencies to their latest available release versions.
 ```bash
 mvn versions:use-latest-releases
 ```
+#### Note: 
+This command should be used cautiously and preferably only in development environments.Avoid running it directly in production branches.
 
 ---
 
