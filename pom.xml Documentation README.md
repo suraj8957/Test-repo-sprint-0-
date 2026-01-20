@@ -1,5 +1,10 @@
 # Apache Maven `pom.xml` Documentation
 
+## Document Details
+|     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|-----------------|--------------|---------|----------------|-------------|-------------|-------------|
+| Suraj Tripathi  |  2026-01-16  |  1.0    |                |             |             |             |
+
 ## Overview
 This document explains **what `pom.xml` is**, **why it exists**, **its real-world use cases**, and **best practices for dependency versioning** based on Apache Maven official documentation and industry standards.
 
