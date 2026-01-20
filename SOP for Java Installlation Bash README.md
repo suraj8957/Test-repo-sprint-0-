@@ -5,7 +5,7 @@
 ## Table of Contents
 
 1. [Purpose](#1-Purpose)
-2. Features
+2. [Scope](#2-Scope)
 3. Purpose
 4. Pre-requisites
 5. Software Overview
@@ -26,13 +26,11 @@ The script supports multiple Java versions (8, 11, 17, 21) and allows safe upgra
 
 ---
 
-## Pre-requisites
+## 2. Scope
 
-|  Requirement     | Description   |
-|-----------------|--------------|
-| OS Access  | User must have access to Ubuntu system   | 
-| Privileges | sudo or root access required |
-| Internet | Required for downloading packages from repositories |
+|Operating System|Java Distribution|Supported Java Versions|Installation Type|Upgrade Support|
+|----------------|-----------------|-----------------------|-----------------|---------------|
+| Ubuntu / Debian |     OpenJDK     |     8, 11, 17, 21     | Automated via Bash script| Yes (via update-alternatives)|
 
 ---
 
