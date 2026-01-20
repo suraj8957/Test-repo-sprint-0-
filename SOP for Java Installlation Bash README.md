@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1. [Purpose](#1.Purpose)
+1. [Purpose](#1-Purpose)
 2. Features
 3. Purpose
 4. Pre-requisites
