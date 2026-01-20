@@ -4,16 +4,16 @@
 
 ## Table of Contents
 
-1. [Purpose](#1-Purpose)
-2. [Scope](#2-Scope)
-3. [Prerequisites](#3-Prerequisites)
-4. [Script Overview](#4-Script_Overview)
-5. Software Overview
-6. System Requirement
-7. Dependencies
-8. Package Management using APT (with Example and Flags)
-9. Troubleshooting
-10. Summary
+ 1. [Purpose](#1-Purpose)
+ 2. [Scope](#2-Scope)
+ 3. [Prerequisites](#3-Prerequisites)
+ 4. [Script_Overview](#4-Script_Overview)
+ 5. Create the Bash Script
+ 6. Grant Execute Permission
+ 7. Execute the Script
+ 8. Java Version Selection
+ 9. Java Installation Process
+10. 10. Java Upgrade / Version Switching
 11. Author
 12. References
 
@@ -46,7 +46,7 @@ Before running the script, ensure the following:
 
 - Bash shell is available
 
-### Verify prerequisites
+#### Verify prerequisites
 ```bash
 lsb_release -a
 ```
@@ -56,169 +56,221 @@ whoami
 
 ---
 
-## 4. Script Overview
+## 4. Script_Overview
 
-| Requirement	 | Minimum Recommendation |
-|-----------------|--------------|
-| OS	 | Ubuntu 18.04 or higher |
-| RAM |	1 GB or higher |
-| Disk |	5 GB or higher |
+- The script performs the following actions:
+
+- Verifies OS compatibility
+
+- Checks for existing Java installation
+
+- Prompts user to select a Java version
+
+- Installs the selected OpenJDK version
+
+- Switches default Java using update-alternatives
+
+- Configures JAVA_HOME system-wide
+
+- Verifies installation
 
 ---
 
-## Dependencies
+## 5. Create the Bash Script
+Create a file for the Java installation script: install_java.sh
+```bash
+#!/bin/bash
 
-| Dependency |	Description |
-|-----------------|--------------|
-| dpkg |	Low-level package management system |
+# -------------------------------
+# Generic Java Installation Script
+# Supports Java 8, 11, 17, 21
+# Works on Ubuntu/Debian
+# -------------------------------
 
----
+set -e
 
-## Package Management using APT
+SUPPORTED_VERSIONS=("8" "11" "17" "21")
 
-### 1. Update Package List
+echo "==============================="
+echo " Java Installation Script"
+echo "==============================="
+
+# Check OS
+if ! command -v apt &>/dev/null; then
+  echo "❌ This script supports only Debian/Ubuntu systems."
+  exit 1
+fi
+
+# Show installed Java (if any)
+if command -v java &>/dev/null; then
+  echo "✔ Existing Java installation found:"
+  java -version
+else
+  echo "ℹ No Java installation found."
+fi
+
+# Ask for Java version
+echo ""
+echo "Supported Java versions: ${SUPPORTED_VERSIONS[*]}"
+read -p "Enter Java version to install: " JAVA_VERSION
+
+if [[ ! " ${SUPPORTED_VERSIONS[*]} " =~ " ${JAVA_VERSION} " ]]; then
+  echo "❌ Unsupported Java version."
+  exit 1
+fi
+
+PACKAGE="openjdk-${JAVA_VERSION}-jdk"
+
+echo ""
+echo "Installing ${PACKAGE} ..."
+
+sudo apt update -y
+sudo apt install -y ${PACKAGE}
+
+echo "✔ Java ${JAVA_VERSION} installed successfully."
+
+# Configure alternatives
+echo ""
+echo "Configuring default Java version..."
+sudo update-alternatives --set java /usr/lib/jvm/java-${JAVA_VERSION}-openjdk-amd64/bin/java || true
+
+# Set JAVA_HOME
+JAVA_HOME_PATH="/usr/lib/jvm/java-${JAVA_VERSION}-openjdk-amd64"
+
+echo "Setting JAVA_HOME=${JAVA_HOME_PATH}"
+
+PROFILE_FILE="/etc/profile.d/java.sh"
+
+sudo bash -c "cat > ${PROFILE_FILE}" <<EOF
+export JAVA_HOME=${JAVA_HOME_PATH}
+export PATH=\$JAVA_HOME/bin:\$PATH
+EOF
+
+sudo chmod +x ${PROFILE_FILE}
+
+echo ""
+echo "✔ JAVA_HOME configured."
+echo "✔ Java installation completed."
+
+echo ""
+echo "==============================="
+echo " Java Version"
+echo "==============================="
+java -version
+
+echo ""
+echo "Please logout/login or run: source ${PROFILE_FILE}"
+
+```
+
+## 6. Grant Execute Permission
+Make the script executable:
+```bash
+chmod +x install_java.sh
+```
+
+## 7. Execute the Script
+Run the script using:
+```bash
+./install_java.sh
+```
 
 Used to update the local package index from repositories.
 
 ➡️ Note: APT internally uses dpkg for installing, removing, and managing packages.
 
-#### Syntax:
-
+## 8. Java Version Selection
+When prompted, enter one of the supported Java versions:
 ```bash
-apt update [options]
+8 | 11 | 17 | 21
 ```
+#### Notes:
+If an unsupported version is entered, the script will exit safely.
 
-#### Common Flags:
+## 9. Java Installation Process
+After version selection, the script will:
 
-- -y : Automatically answer yes to prompts
+- Update package repositories
 
-- -q : Quiet mode (minimal output)
+- Install the selected OpenJDK package
 
-- --assume-yes : Automatically assume “yes” for all prompts
+- Display a success message after installation
 
-#### Example:
+<img width="1736" height="940" alt="image" src="https://github.com/user-attachments/assets/a5ef6920-7c45-4845-b6de-6c24fdfdbd00" />
 
-```bash
-sudo apt update -y -q
-```
 
-<img width="1472" height="558" alt="image" src="https://github.com/user-attachments/assets/1e9c73b8-1738-4039-86c7-bac5ad835326" />
+## 10. Java Upgrade / Version Switching
 
+- To upgrade or switch Java versions:
+
+- Re-run the same script
+
+- Select a different Java version
+
+#### Behavior:
+
+- New Java version is installed
+
+- Default Java version is switched using update-alternatives
+
+- Existing Java versions are not removed
  ---
-
- ### 2. Install a Package
-
-Used to install a software package.
-
-#### Syntax:
-
+ ## 11. JAVA_HOME Configuration
+ The script configures JAVA_HOME system-wide by creating:
+ ```bash
+/etc/profile.d/java.sh
+```
+Contents include:
 ```bash
-apt install <package-name> [options]
+export JAVA_HOME=/usr/lib/jvm/java-<version>-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+```
+#### Apply immediately:
+```bash
+source /etc/profile.d/java.sh
 ```
 
-#### Common Flags:
+ ## 12. Verification
+ Verify Java installation:
+ ```bash
+java -version
+```
+<img width="956" height="156" alt="image" src="https://github.com/user-attachments/assets/444e278a-6725-4297-ac9b-066d68ea7608" />
 
-- -y : Automatically confirm installation
-  
-- --no-install-recommends : Skip recommended packages
-  
-- -q : Minimal output
+Verify JAVA_HOME:
+ ```bash
+echo $JAVA_HOME
+```
+<img width="676" height="98" alt="image" src="https://github.com/user-attachments/assets/51b0b944-8fc0-4c40-9347-5d3150196eb7" />
 
-- --reinstall : Reinstall package if already installed
+## 13. Troubleshooting
 
-- -f / --fix-broken : Fix broken dependencies
-
-
-#### Example:
-
+#### Issue: Java version not switching
 ```bash
-sudo apt install nginx -y --no-install-recommends
+sudo update-alternatives --config java
 ```
 
-<img width="1578" height="581" alt="image" src="https://github.com/user-attachments/assets/d9785309-1fac-4043-b505-c912661b84e5" />
+#### Issue: JAVA_HOME not updated
+- Log out and log back in
+  OR
+  ```bash
+  source /etc/profile.d/java.sh
+  ```
 
+#### Issue: Script fails immediately
+- Ensure OS is Ubuntu/Debian
+
+- Ensure apt command is available
+
+## 14. Best Practices
+- Do not manually remove older Java versions
+
+- Always use update-alternatives for switching Java
+
+- Use scripts to ensure consistency across environments
+
+- Re-run the script for upgrades instead of manual installs
 ---
 
-### 3. Remove a Package
-
-Used to remove an installed software package while keeping configuration files.
-
-#### Syntax:
-
-```bash
-apt remove <package-name> [options]
-```
-
-#### Common Flags:
-
-- -y : Automatically confirm removal
-
-- -q : Quiet mode
-
-#### Example:
-
-```bash
-sudo apt remove nginx -y -q
-```
-
-<img width="1406" height="495" alt="image" src="https://github.com/user-attachments/assets/f538b5c2-2c43-4800-a9b9-ff40e80a59b5" />
-
----
-
-
-### 4. Remove Package with Configuration Files
-
-Used to completely remove a package along with its configuration files.
-
-#### Syntax:
-
-```bash
-apt purge <package-name> [options]
-```
-
-#### Common Flags :
-- -y : Automatically confirm purge
-
-- -q : Quiet mode
-
-#### Example:
-
-```bash
-sudo apt purge nginx -y -q
-```
-
-<img width="1561" height="550" alt="image" src="https://github.com/user-attachments/assets/f82ff832-4db1-4ab8-bc97-acf73183bb61" />
-
----
-
-## Troubleshooting
-| Issue |	Solution |
-|------ | ----- |
-| Package not found |	Verify package name spelling |
-| Permission denied |	Use sudo for elevated privileges |
-| Update fails |	Run sudo apt update again or check internet connectivity |
-
----
-
-## Summary
-
-APT is an essential and powerful package management tool in Ubuntu systems.
-It allows users to install, update, upgrade, remove, and clean packages efficiently using common flags for automation and quiet execution.
-
----
-
-## Author
-| Name |	Role |	Team |
-| ----- | ------ | -----|
-| Gunjan Jangra |	DevOps Trainee |	Saarthi |
-
----
-
-## References
-
-| Reference | Link |
-| ----- | ----- |
-| Linux Man Pages-apt |https://manpages.ubuntu.com/manpages/resolute/en/man8/apt.8.html?utm_source |
-| Ubuntu Documentation |	https://help.ubuntu.com/community/Apt |
-
----
+## 15. Conclusion
+This SOP provides a standardized, repeatable, and upgrade-safe method to install and manage Java using a Bash script.
