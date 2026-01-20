@@ -4,7 +4,7 @@
 
 | Created By      | Created on   | Version | Last updated by   | Pre Reviewer   | L0 Reviewer | L1 Reviewer | L2 Reviewer |
 |-----------------|--------------|---------|-------------------|----------------|-------------|-------------|-------------|
-| Suraj Tripathi  | 2026-01-16   | 1.0     | Suraj Tripathi    |                |             |             |             |
+| Suraj Tripathi  | 2026-01-19   | 1.0     | Suraj Tripathi    |                |             |             |             |
 
 ---
 
@@ -24,8 +24,8 @@
    - [5.2 Install Required Packages](#52-install-required-packages)
    - [5.3 Generate requirements.txt](#53-generate-requirementstxt)
    - [5.4 Verify requirements.txt](#54-verify-requirementstxt)
-6. [Troubleshooting](#5-troubleshooting)
-7. [Revision History](#6-revision-history)
+6. [Troubleshooting](#6-troubleshooting)
+7. [Revision History](#7-revision-history)
 
 ---
 
@@ -109,11 +109,6 @@ cat requirements.txt
 ---
 ---
 
-## 7. Revision History
-
-| Version | Date       | Author        | Change Description       |
-|---------|------------|---------------|--------------------------|
-| 1.0     | 2026-01-18 | Suraj tripathi| Initial version          |
 
 ---
 
