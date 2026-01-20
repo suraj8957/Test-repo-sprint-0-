@@ -1,8 +1,7 @@
 # SOP: Apache Maven `pom.xml`
 ## Step-by-Step Installation & Usage Guide
 
-This document is a **Standard Operating Procedure (SOP)** explaining how to **install Maven**, **understand `pom.xml`**, and **use it step by step** in real projects.  
-This file is **copy-paste ready** for `README.md`.
+This document is a **Standard Operating Procedure (SOP)** explaining how to **install Maven**, **understand `pom.xml`**, and **use it step by step** in real projects.  .
 
 ---
 
