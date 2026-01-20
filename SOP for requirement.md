@@ -26,7 +26,7 @@
    - [6.2 Install Required Packages](#62-install-required-packages)
    - [6.3 Generate requirements.txt](#63-generate-requirementstxt)
    - [6.4 Verify requirements.txt](#64-verify-requirementstxt)
-   - [6.5 Upgrading Dependencies from requirements.txt](#65-upgrading-dependencies-from-requirementtxt)
+   - [6.5 Upgrading Dependencies from requirements.txt](#65-Upgrading-dependencies-from-requirementtxt)
 7. [Troubleshooting](#7-troubleshooting)
 
 ---
