@@ -6,7 +6,7 @@
 
 1. [Purpose](#1-Purpose)
 2. [Scope](#2-Scope)
-3. Purpose
+3. [Prerequisites](#3-Prerequisites)
 4. Pre-requisites
 5. Software Overview
 6. System Requirement
@@ -34,11 +34,25 @@ The script supports multiple Java versions (8, 11, 17, 21) and allows safe upgra
 
 ---
 
-## Software Overview
+## 3. Prerequisites
 
-|  Software	    | Description   |
-|-----------------|--------------|
-| apt |	Command-line package manager for Ubuntu system |
+Before running the script, ensure the following:
+
+- Ubuntu or Debian-based system
+
+- User has sudo access
+
+- Internet connectivity is available
+
+- Bash shell is available
+
+### Verify prerequisites
+```bash
+lsb_release -a
+```
+```bash
+whoami
+```
 
 ---
 
