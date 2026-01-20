@@ -7,7 +7,7 @@
 1. [Purpose](#1-Purpose)
 2. [Scope](#2-Scope)
 3. [Prerequisites](#3-Prerequisites)
-4. Pre-requisites
+4. [Script Overview](#4-Script_Overview)
 5. Software Overview
 6. System Requirement
 7. Dependencies
@@ -56,7 +56,7 @@ whoami
 
 ---
 
-## System Requirement
+## 4. Script Overview
 
 | Requirement	 | Minimum Recommendation |
 |-----------------|--------------|
