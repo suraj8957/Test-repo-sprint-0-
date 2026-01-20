@@ -1,5 +1,7 @@
 # Standard Operating Procedure (SOP's) for Java Installation and Upgrade Using Bash Script (Ubuntu/Debian)
 
+## Document Details
+
 ---
 
 ## Table of Contents
@@ -13,7 +15,7 @@
  7. Execute the Script
  8. Java Version Selection
  9. Java Installation Process
-10. 10. Java Upgrade / Version Switching
+10. Java Upgrade / Version Switching
 11. Author
 12. References
 
