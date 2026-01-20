@@ -53,26 +53,26 @@ This SOP applies to all team members involved in setting up, maintaining, and su
 
 ## 4. Installation from requirement.txt
 
-### 4.1 Navigate to Project Directory
+## 4.1 Navigate to Project Directory
 <img width="663" height="157" alt="image" src="https://github.com/user-attachments/assets/59a7fb2b-85f9-470a-a614-d5e941fb5af6" />
 
 
-#### 4.1.1 Create a Virtual Environment (Recommended)
+### 4.1.1 Create a Virtual Environment (Recommended)
 Create an isolated environment to avoid dependency conflicts.
 ```bash
 python3 -m venv surajvenv
 ```
-#### 4.1.2 Activate the Virtual Environment
+### 4.1.2 Activate the Virtual Environment
 <img width="961" height="143" alt="image" src="https://github.com/user-attachments/assets/d811553c-3186-4af6-9a0b-6472798ef094" />
 
-#### 4.1.3 Create the file "requirement.txt" and install the packages from the requirement file
+### 4.1.3 Create the file "requirement.txt" and install the packages from the requirement file
 <img width="1912" height="506" alt="image" src="https://github.com/user-attachments/assets/983e19cb-7358-44ba-8dd7-2e8616837e19" />
 
 The **requirement.txt** file should list each Python package on a new line. For best results, use "version pinning" to ensure your code doesn't break when a library updates. 
 - **Standard Entry**: package_name==version (e.g., pandas==2.2.3).
 - **Alternative (Ranges):** package_name>=1.0.0 (allows any version 1.0.0 or newer).
 
-#### 4.1.4 Verify Installation
+### 4.1.4 Verify Installation
 ```bash
 pip list
 ```
@@ -98,7 +98,7 @@ pip freeze > requirements.txt
 cat requirements.txt
 ```
 
-## 5. Troubleshooting
+## 6. Troubleshooting
 
 | Issue                     | Possible Cause                                  | Solution                                   |
 |---------------------------|--------------------------------------------     |--------------------------------------------|
@@ -109,7 +109,7 @@ cat requirements.txt
 ---
 ---
 
-## 6. Revision History
+## 7. Revision History
 
 | Version | Date       | Author        | Change Description       |
 |---------|------------|---------------|--------------------------|
