@@ -233,7 +233,7 @@ Example:
 
 ---
 
-## Best Practices Summary
+## 7. Best Practices Summary
 - Lock dependency versions
 - Use `dependencyManagement`
 - Avoid `LATEST` and version ranges
@@ -243,7 +243,7 @@ Example:
 
 ---
 
-## Conclusion
+## 8. Conclusion
 `pom.xml` is a **central, declarative configuration file** that enables Maven to:
 - Manage dependencies
 - Automate builds
@@ -254,6 +254,6 @@ Correct dependency versioning is critical to maintain **stable, secure, and repr
 
 ---
 
-## References
+## 9. References
 - Apache Maven Official Documentation  
   https://maven.apache.org/pom.html
