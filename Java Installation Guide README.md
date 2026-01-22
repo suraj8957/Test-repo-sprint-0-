@@ -4,6 +4,10 @@ This document provides a step-by-step guide to **download, install, and configur
 It also explains how to verify the installation and configure environment variables.
 
 ---
+## Document Details
+|     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
+|-----------------|--------------|---------|----------------|-------------|-------------|-------------|
+| Suraj Tripathi  |  2026-01-16  |  1.0    |                |             |             |             |
 
 ## Table of Contents
 
