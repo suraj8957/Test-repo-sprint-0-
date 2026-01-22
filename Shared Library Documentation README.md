@@ -11,7 +11,7 @@
 
 ## Table of Content
 
-1. [What is a Shared Library?](#1-what-is-a-shared-library)
+1. [What is a Shared Library](#1-what-is-a-shared-library)
 2. [Why Shared Library?](2#why-shared-library-?)
 3. [Shared Library Structure](#3-shared-library-structure)
 4. [Understanding vars](#4-understanding-vars)
@@ -26,7 +26,7 @@
 
 ---
 
-## 1. What is a Shared Library ?
+## 1. What is a Shared Library
 
 A Shared Library is a centralized place where common and reusable code is stored so that it can be used by multiple projects or automation workflows.
 
