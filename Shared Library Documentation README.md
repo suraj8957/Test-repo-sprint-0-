@@ -12,7 +12,7 @@
 ## Table of Content
 
 1. [What is a Shared Library](#1-what-is-a-shared-library)
-2. [Why Shared Library?](2#why-shared-library-?)
+2. [Why Shared Library](2#why-shared-library-?)
 3. [Shared Library Structure](#3-shared-library-structure)
 4. [Understanding vars](#4-understanding-vars)
 5. [Understanding src](#5-understanding-src)
@@ -35,7 +35,7 @@ This saves time, reduces errors, and keeps automation consistent.
 
 ---
 
-## 2. Why Shared Library ?
+## 2. Why Shared Library 
 
 ### Without a shared library:
 
