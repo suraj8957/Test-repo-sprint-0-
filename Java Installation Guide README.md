@@ -11,11 +11,11 @@ It also explains how to verify the installation and configure environment variab
 
 ## Table of Contents
 
-1. Introduction  
-2. Java Installation on Windows  
-3. Java Installation on Linux  
-4. Java Installation on macOS  
-5. Conclusion
+1. [Introduction](#1-introduction)
+2. [Java Installation on Windows](#2-java-installation-on-windows-64-bit)
+3. [Java Installation on Linux](#3-java-installation-on-linux)
+4. [Java Installation on macOS](#4-java-installation-on-macos)
+5. [Conclusion](#5-conclusion)
 
 ---
 
