@@ -227,5 +227,5 @@ This SOP provides standardized guidance for using Apache Maven to build, test, a
 ## 11. Author Details
 | Name             | Role            | Team                 | Contact Type | Details |  
 |------------------|-----------------|----------------------|--------------|---------|
-| Suraj Tripathi   | Devops Trainee  |  Saarthi             |Email         |[surajtripathi167@gmail.com](mailto:surajtripathi167@gmail.com)
+| Suraj Tripathi   | Devops Trainee  |  Saarthi             |Email         |[suraj.tripathi.snaatak@mygurukulam.co](mailto:suraj.tripathi.snaatak@mygurukulam.co)
 
