@@ -37,25 +37,12 @@ This saves time, reduces errors, and keeps automation consistent.
 
 ## 2. Why Shared Library
 
-### Without a shared library:
-
-- Same code is copied into many places
-
-- Fixing a bug requires multiple updates
-
-- Different teams follow different practices
-
-- Maintenance becomes difficult
-
-### With a shared library:
-
-- Common logic exists in one place
-
-- Changes are applied once and used everywhere
-
-- All teams follow the same standards
-
-- Automation becomes clean and reliable
+|Without a shared library|With a shared library|
+|------------------------|---------------------|
+|Same code is copied into many places|Common logic exists in one place|
+|Fixing a bug requires multiple updates|Changes are applied once and used everywhere|
+|Different teams follow different practices|All teams follow the same standards|
+|Maintenance becomes difficult|Automation becomes clean and reliable|
 
 Shared libraries help organizations scale automation safely.
 
