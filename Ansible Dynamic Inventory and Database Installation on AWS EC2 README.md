@@ -5,7 +5,7 @@ This document explains how to **set up Ansible Dynamic Inventory from scratch** 
 ## Document Details
 |     Author      |  Created on  | Version |  Pre Reviewer  | L0 Reviewer | L1 Reviewer | L2 Reviewer |
 |-----------------|--------------|---------|----------------|-------------|-------------|-------------|
-| Suraj Tripathi  |  2026-01-16  |  1.0    |                |             |             |             |
+| Suraj Tripathi  |  2026-01-22  |  1.0    |                |             |             |             |
 
 ---
 ## Table of Contents
