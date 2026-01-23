@@ -10,17 +10,20 @@ This document explains how to **set up Ansible Dynamic Inventory from scratch** 
 ---
 ## Table of Contents
 
-1. Introduction  
-2. Prerequisites  
-3. Ansible Installation  
-4. AWS Credentials Configuration  
-5. Dynamic Inventory Setup  
-6. Testing Dynamic Inventory  
-7. Database Installation Using Dynamic Inventory  
-8. Verification  
-9. Best Practices  
-10. Conclusion
-11. Contact Details
+1. [Introduction](#1-introduction)
+2. [Prerequisites](#2-prerequisites)
+3. [Install Ansible on Ubuntu](#3-install-ansible-on-ubutnu)
+4. [Configure AWS Credentials](#4-configure-aws-credentials)
+5. [Enable Dynamic Inventory Plugin](#5-enable-dynamic-inventory-plugin)
+6. [Create Dynamic Inventory File](#6-create-dynamic-inventory-file)
+7. [Test Dynamic Inventory](#7-test-dynamic-inventory)
+8. [Verify Connectivity](#8-verify-connectivity)
+9. [Install Database Using Dynamic Inventory](#9-install-database-using-dynamic-inventory)
+10. [Run the Playbook](#10-run-the-playbook)
+11. [Verify Database Installation](#11-verify-database-installation)
+12. [Best Practices](#12-best-practices)
+13. [Conclusion](#13-conclusion)
+14. [Contact Information](#14-contact-information)
 
 ---
 ## 1. Introduction
