@@ -214,13 +214,30 @@ systemctl status mysql
 ```
 <img width="1499" height="491" alt="image" src="https://github.com/user-attachments/assets/61558bad-21e2-408f-946c-028134d9c1a2" />
 
+---
+## 12. Best Practices
+- Use EC2 tags for grouping instances
 
+- Prefer IAM roles over access keys
 
+- Avoid hardcoding IP addresses
 
+- Separate inventory and playbooks
 
+- Test inventory before production runs
 
+- Use private IPs in production VPCs
 
+---
+## 13. Conclusion
 
+Dynamic Inventory enables Ansible to automatically manage cloud infrastructure without manual inventory updates.
+By combining AWS EC2 Dynamic Inventory with Ansible playbooks, databases and applications can be installed in a scalable, automated, and reliable way.
 
+## 14. Contact Information
 
-
+| Contact Type | Details                                                             |
+| ------------ | ------------------------------------------------------------------- |
+| Name         | Suraj Tripathi                                                      |
+| Role         | DevOps Trainee                                                      |
+| Email        | [suraj.tripathi.snaatak@mygurukulam.co](mailto:suraj.tripathi.snaatak@mygurukulam.co) |
