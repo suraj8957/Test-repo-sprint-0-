@@ -159,7 +159,8 @@ Expected output:
   |--@role_db
       |--ec2-xx-xx-xx.compute.amazonaws.com
 ```
-<img width="1908" height="331" alt="image" src="https://github.com/user-attachments/assets/48d7d38e-a1a9-4e3e-9662-6f732d039e5d" />
+<img width="1890" height="367" alt="image" src="https://github.com/user-attachments/assets/5319dc6a-697d-4039-85a7-ce885bc1498a" />
+
 
 ---
 ## 8. Verify Connectivity
